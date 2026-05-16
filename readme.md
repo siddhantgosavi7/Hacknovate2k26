@@ -1,4 +1,4 @@
-<a src="https://siddhantgosavi7.github.io/Hacknovate2k26/"># EcoSort AI 🌱♻️</a>
+[# EcoSort AI 🌱♻️](https://siddhantgosavi7.github.io/Hacknovate2k26/)
 
 > Transforming Citizens into Smart Recyclers using AI.
 
