@@ -1,6 +1,9 @@
 // @ts-nocheck
 async function analyzeWaste() {
 
+    const item = document.getElementById("wasteInput").value;
+    console.log(item);
+
     const response = await fetch(
         "http://localhost:3000/analyze",
         {
@@ -11,7 +14,7 @@ async function analyzeWaste() {
             },
 
             body: JSON.stringify({
-                item: "Bottle"
+                item: item
             })
         }
     );
@@ -20,7 +23,13 @@ async function analyzeWaste() {
 
     console.log(data);
 
-    document.getElementById("result").innerText =
-        `${data.waste} | Eco Score: ${data.ecoScore}`;
+    document.getElementById("result").innerHTML = `
+    <h2>${data.waste}</h2>
+    <p>Eco Score: ${data.ecoScore}</p>
+    <p>Guidance: ${data.guidance}</p>
+    <p>Points Earned: +${data.pointsEarned}</p>
+    <p>Confidence: ${data.confidence}</p>
+    <p>Carbon Saved: ${data.carbonSaved}</p>
+`;
 
 }
