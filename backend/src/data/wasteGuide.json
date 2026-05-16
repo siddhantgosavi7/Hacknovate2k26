@@ -1,0 +1,47 @@
+[
+  {
+    "keywords": ["plastic", "bottle", "packet", "wrapper"],
+    "wasteType": "Plastic Bottle",
+    "category": "Dry Waste",
+    "recyclable": true,
+    "bin": "Blue Bin",
+    "co2Kg": 0.5,
+    "tip": "Rinse the item and keep it dry before placing it in the recycling bin."
+  },
+  {
+    "keywords": ["banana", "food", "vegetable", "peel", "organic"],
+    "wasteType": "Food Scraps",
+    "category": "Wet Waste",
+    "recyclable": false,
+    "bin": "Green Bin",
+    "co2Kg": 0.25,
+    "tip": "Compost organic waste or use the green wet-waste bin."
+  },
+  {
+    "keywords": ["battery", "cell", "chemical"],
+    "wasteType": "Battery Cell",
+    "category": "Hazardous Waste",
+    "recyclable": false,
+    "bin": "Red Bin",
+    "co2Kg": 1.2,
+    "tip": "Do not mix batteries with regular waste. Use a certified hazardous waste drop-off."
+  },
+  {
+    "keywords": ["phone", "charger", "laptop", "cable", "electronic"],
+    "wasteType": "Electronic Waste",
+    "category": "E-Waste",
+    "recyclable": true,
+    "bin": "E-Waste Collection Point",
+    "co2Kg": 2.1,
+    "tip": "Send electronics to an authorized e-waste center for safe material recovery."
+  },
+  {
+    "keywords": ["paper", "cardboard", "newspaper", "box"],
+    "wasteType": "Paper/Cardboard",
+    "category": "Dry Waste",
+    "recyclable": true,
+    "bin": "Blue Bin",
+    "co2Kg": 0.7,
+    "tip": "Keep paper dry and remove food residue before recycling."
+  }
+]
