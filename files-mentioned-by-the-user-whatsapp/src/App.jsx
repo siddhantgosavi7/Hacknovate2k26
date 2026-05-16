@@ -12,6 +12,7 @@ import SegregationGuide from './sections/SegregationGuide.jsx';
 import WasteScanner from './sections/WasteScanner.jsx';
 import { navItems } from './data/mockData.js';
 import Leaderboard from "./sections/Leaderboard";
+
 export default function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [language, setLanguage] = useState('English');
