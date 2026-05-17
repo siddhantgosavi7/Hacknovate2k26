@@ -1,28 +1,35 @@
-const express = require("express");
-const cors = require("cors");
+import express from 'express';
+import cors from 'cors';
+import dotenv from 'dotenv';
+import authRoutes from './routes/auth.js';
+import wasteRoutes from './routes/waste.js';
+import leaderboardRoutes from './routes/leaderboard.js';
+import pickupRoutes from './routes/pickups.js';
+import chatRoutes from './routes/chat.js';
+import ecocoinsRoutes from './routes/ecocoins.js';
+import marketplaceRoutes from './routes/marketplace.js';
+
+dotenv.config();
 
 const app = express();
+const PORT = process.env.PORT || 5050;
 
 app.use(cors());
 app.use(express.json());
 
-app.post("/analyze", async (req, res) => {
+// Routes
+app.use('/api/v1/auth', authRoutes);
+app.use('/api/v1/waste-scans', wasteRoutes);
+app.use('/api/v1/leaderboard', leaderboardRoutes);
+app.use('/api/v1/pickups', pickupRoutes);
+app.use('/api/v1/chat', chatRoutes);
+app.use('/api/v1/ecocoins', ecocoinsRoutes);
+app.use('/api/v1/marketplace', marketplaceRoutes);
 
-    const item = req.body.item;
-    console.log(item);
-
-    res.json({
-        waste: "Plastic Bottle",
-        recyclable: true,
-        ecoScore: 87,
-        guidance: "Use Blue Recycling Bin",
-        pointsEarned: 20,
-        confidence: "94%",
-        carbonSaved: "1.4kg CO₂"
-    });
-
+app.get('/api/v1/health', (req, res) => {
+  res.status(200).json({ status: 'ok', message: 'Backend is running' });
 });
 
-app.listen(3000, () => {
-    console.log("Server running");
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
