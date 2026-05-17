@@ -1,6 +1,0 @@
-Error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-pro-vision:generateContent: [404 Not Found] models/gemini-pro-vision is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.\nError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-pro-vision:generateContent: [404 Not Found] models/gemini-pro-vision is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.
-    at handleResponseNotOk (file:///Users/prathameshchougale/Documents/HK/FRONTEND/Hk/backend/node_modules/@google/generative-ai/dist/index.mjs:412:11)
-    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
-    at async makeRequest (file:///Users/prathameshchougale/Documents/HK/FRONTEND/Hk/backend/node_modules/@google/generative-ai/dist/index.mjs:385:9)
-    at async generateContent (file:///Users/prathameshchougale/Documents/HK/FRONTEND/Hk/backend/node_modules/@google/generative-ai/dist/index.mjs:830:22)
-    at async file:///Users/prathameshchougale/Documents/HK/FRONTEND/Hk/backend/routes/waste.js:45:20
