@@ -4,7 +4,7 @@ import { GoogleGenerativeAI } from '@google/generative-ai';
 const router = express.Router();
 
 // Initialize Gemini API
-const genAI = new GoogleGenerativeAI("AIzaSyBiiumYK2hMjxNuFEiFOAO69uVmjnQDc_4");
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || "AIzaSyBiiumYK2hMjxNuFEiFOAO69uVmjnQDc_4");
 
 // POST /api/v1/chat
 router.post('/', async (req, res) => {

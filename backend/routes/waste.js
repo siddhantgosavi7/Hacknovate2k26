@@ -7,7 +7,7 @@ const router = express.Router();
 const upload = multer({ dest: 'uploads/' });
 
 // Initialize Gemini API
-const genAI = new GoogleGenerativeAI("AIzaSyBiiumYK2hMjxNuFEiFOAO69uVmjnQDc_4");
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || "AIzaSyBiiumYK2hMjxNuFEiFOAO69uVmjnQDc_4");
 
 // POST /api/v1/waste-scans/upload
 router.post('/upload', upload.single('image'), async (req, res) => {
